@@ -15,7 +15,11 @@ class GoalsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isHidden = false
+        
     }
 
     @IBAction func addGoalBtnWasPressed(_ sender: Any) {
